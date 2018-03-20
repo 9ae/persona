@@ -1,4 +1,5 @@
 $primary: hsl(171, 100%, 41%)
+$grey: #dedede
 
 .persona
 	h3.subtitle
@@ -54,7 +55,7 @@ $primary: hsl(171, 100%, 41%)
 .bio
 	margin: 1.5rem 0
 	width: 100%
-	background-color: whitesmoke
+	background-color: $grey
 	padding: 10px
 
 .motives
@@ -65,3 +66,15 @@ $primary: hsl(171, 100%, 41%)
 
 .platforms
 	margin: 1.5rem 0
+
+@import range
+
+$track-color: $grey
+$thumb-color: $primary
+$track-width: 100%
+$track-height: $thumb-height - 2
+$track-border-width: 0
+$thumb-radius: 4px
+
+input[type=range]
+	+input-type-range
